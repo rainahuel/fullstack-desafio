@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: API de Usuarios
+  description: API REST para gestionar usuarios
+  version: 1.0.0
+paths:
+  /api/users:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        '200':
+          description: Lista de usuarios obtenida correctamente
+    post:
+      summary: Crear un usuario
+      responses:
+        '201':
+          description: Usuario creado exitosamente
+  /api/users/{id}:
+    get:
+      summary: Obtener un usuario por ID
+      responses:
+        '200':
+          description: Usuario encontrado
+        '404':
+          description: Usuario no encontrado
+    put:
+      summary: Actualizar un usuario
+      responses:
+        '200':
+          description: Usuario actualizado correctamente
+        '404':
+          description: Usuario no encontrado
+    delete:
+      summary: Eliminar un usuario
+      responses:
+        '204':
+          description: Usuario eliminado exitosamente
+        '404':
+          description: Usuario no encontrado
